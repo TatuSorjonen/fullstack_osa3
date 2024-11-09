@@ -69,8 +69,6 @@ app.get('/info', (request, response) => {
       )
 })
 
-app.use(unknownEndpoint)
-
 const generateId = () => {
     const maxId = persons.length > 0
       ? Math.max(...persons.map(n => Number(n.id)))

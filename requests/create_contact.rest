@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/persons 
+POST https://fullstack-osa3-qx0i.onrender.com/api/persons 
 Content-Type: application/json
 
 { 
-"name": "Foobar",
+"name": "Testaaja",
 "number": "040-23456-78"
 }
