@@ -6,6 +6,7 @@ const cors = require('cors')
 const unknownEndpoint = (req, res) => {
     res.status(404).send({ error: 'unknown endpoint' })}
 
+app.use(express.static('dist'))
 app.use(express.json())
 morgan.token('body', (req) => {
     return JSON.stringify(req.body)})
@@ -99,7 +100,6 @@ app.post('/api/persons', (request, response) => {
             error: 'name is already in list' 
         })
     }
-    console.log(persons.includes(person.name))
     
     persons = persons.concat(person)
     
